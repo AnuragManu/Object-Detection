@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkground"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tvDescription"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+            android:id="@+id/tvPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/tv_placeholder"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:background="@color/black"
+        android:layout_above="@id/llSampleImage"
+        android:textColor="@color/white"
+        android:text="@string/tv_description" />
+
+    <LinearLayout
+        android:id="@+id/llSampleImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/captureImageFab"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        >
+
+        <ImageView
+            android:id="@+id/imgSampleOne"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_margin="8dp"
+            android:src="@drawable/img_meal_one" />
+
+        <ImageView
+            android:id="@+id/imgSampleTwo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_meal_two" />
+
+        <ImageView
+            android:id="@+id/imgSampleThree"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:layout_margin="8dp"
+            android:src="@drawable/img_meal_three" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/captureImageFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_camera"
+        android:text="@string/tv_take_photo"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:layout_margin="8dp"/>
+</LinearLayout>
